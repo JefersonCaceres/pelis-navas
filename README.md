@@ -20,8 +20,43 @@
 7. Desplegar proyecto en cualquier tipo de nube (AWS, AZURE).
 
 
+## Uso de los servicios http
+- para consumir los servicios es necesario importar en el PostMan el archivo .json que se encuentra en la carpeta postman del proyecto
+  https://github.com/JefersonCaceres/pelis-navas/tree/main/postman
+  donde se encontrara los servicios postman
+- Saldra una carpeta llamada Movie con los siguientes servicios 
+  1. consulta lista de detalles (get list movie details)
+  2. consulta lista de peliculas (get list-movie)
+  3. crear una lista de peliculas (create movie)
+  4. actualizar una lista de peliculas (put movie) # OBSERVACION solo se puede actualizar lista de peliculas creadas por el usuario
+  5. eliminar una lista de pelicula (delete) # OBSERVACION solo se puede actualizar lista de peliculas creadas por el usuario
+  6. consulta trae el numero de de peliculas de una lista menor a 20 menos igual a 20 peliculas (pagination)
 
+## get list movie details
+/list-movie-details/{id}
+para el uso de este servicio se requiere el id de la lista de peliculas
 
+## get list-movie
+/list-movie/2
+para el uso de este servicio se requiere el id de la lista de peliculas
+
+## create movie
+/createMovie
+requiere un cuerpo tipo json
+{"name":"My Cool List","iso_639_1":"en"}
+donde name es el nombre de la lista, y iso_639_1 es el lenguaje 
+
+## put movie
+/updateMovie/{id}
+para este servicio se requiere cuerpo y un id teniendo en cuenta la observacion 
+{
+  "description": "This list is pretty awesome."
+}
+
+## pagination
+para este servicio se requiere cuerpo y un id de la lista
+{"size":5}
+en el cuerpo se envia el numero de peliculas que desea traer de una lista
 
 
 ## Aspectos a evaluar:
