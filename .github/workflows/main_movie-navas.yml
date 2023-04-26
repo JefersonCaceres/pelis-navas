@@ -22,8 +22,12 @@ jobs:
           java-version: '8'
 
       - name: Build with Gradle
-        run: ./gradlew clean build
-
+        steps:
+        - script: chmod +x ./gradlew
+          displayName: 'Grant execute permission to gradlew'
+        - script: ./gradlew clean build
+          displayName: 'Build with Gradle'
+          
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
