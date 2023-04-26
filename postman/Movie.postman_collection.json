@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "4548a06d-9760-4e6d-a70d-5923ad60d088",
+		"name": "Movie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get list movie details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/movie/navas//list-movie-details/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"movie",
+						"navas",
+						"",
+						"list-movie-details",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get list-movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/movie/navas//list-movie/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"movie",
+						"navas",
+						"",
+						"list-movie",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXJzaW9uIjoxLCJuYmYiOjE2ODIzNTA4NTEsImF1ZCI6IjMyOTlmZWY3NjBmYjQ2ZDU2M2RlM2NhNjIyZjJkMTViIiwianRpIjoiNjEzNzMxNiIsInN1YiI6IjY0NDM2MTcyYjNmNmY1MDRmNDllNGI3NSIsInNjb3BlcyI6WyJhcGlfcmVhZCIsImFwaV93cml0ZSJdfQ.XrAwQwW3AXQ8xTdetU72AO4PHCcqf3t-I2haobWua4A",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json;charset=utf-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"My Cool List\",\"iso_639_1\":\"en\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/movie/navas/createMovie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"movie",
+						"navas",
+						"createMovie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put movie",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXJzaW9uIjoxLCJuYmYiOjE2ODIzNTA4NTEsImF1ZCI6IjMyOTlmZWY3NjBmYjQ2ZDU2M2RlM2NhNjIyZjJkMTViIiwianRpIjoiNjEzNzMxNiIsInN1YiI6IjY0NDM2MTcyYjNmNmY1MDRmNDllNGI3NSIsInNjb3BlcyI6WyJhcGlfcmVhZCIsImFwaV93cml0ZSJdfQ.XrAwQwW3AXQ8xTdetU72AO4PHCcqf3t-I2haobWua4A",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json;charset=utf-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"description\": \"This list is pretty awesome.\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/movie/navas/updateMovie/8250324",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"movie",
+						"navas",
+						"updateMovie",
+						"8250324"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXJzaW9uIjoxLCJuYmYiOjE2ODIzNTA4NTEsImF1ZCI6IjMyOTlmZWY3NjBmYjQ2ZDU2M2RlM2NhNjIyZjJkMTViIiwianRpIjoiNjEzNzMxNiIsInN1YiI6IjY0NDM2MTcyYjNmNmY1MDRmNDllNGI3NSIsInNjb3BlcyI6WyJhcGlfcmVhZCIsImFwaV93cml0ZSJdfQ.XrAwQwW3AXQ8xTdetU72AO4PHCcqf3t-I2haobWua4A",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json;charset=utf-8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/movie/navas/deleteMovie/8250324",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"movie",
+						"navas",
+						"deleteMovie",
+						"8250324"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pagination",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXJzaW9uIjoxLCJuYmYiOjE2ODIzNTA4NTEsImF1ZCI6IjMyOTlmZWY3NjBmYjQ2ZDU2M2RlM2NhNjIyZjJkMTViIiwianRpIjoiNjEzNzMxNiIsInN1YiI6IjY0NDM2MTcyYjNmNmY1MDRmNDllNGI3NSIsInNjb3BlcyI6WyJhcGlfcmVhZCIsImFwaV93cml0ZSJdfQ.XrAwQwW3AXQ8xTdetU72AO4PHCcqf3t-I2haobWua4A"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json;charset=utf-8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"size\":5}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/movie/navas/pagination/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"movie",
+						"navas",
+						"pagination",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
